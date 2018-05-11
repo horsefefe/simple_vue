@@ -1,0 +1,63 @@
+@import "var";
+// 基本使用CSS
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+html, body {
+  height: 100%;
+  overflow: auto;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  height: 100%;
+  overflow: hidden;
+  color: #333;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: Microsoft YaHei,sans-serif,Lantinghei SC,Open Sans,Arial,Hiragino Sans GB,STHeiti,WenQuanYi Micro Hei,SimSun,sans-serif;
+}
+img {
+  display: block;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:focus, input:focus, textarea:focus {
+  outline: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pcl {
+  display: block;
+  position: absolute;
+}
+.wrap {
+  max-width: 640/@REM;
+  min-width: 320/@REM;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+}
+.none {
+  display: none!important;
+}
+// 防止页面劫持
+body > *:not([ahw]) {
+  display: none !important;
+  color: #fff !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  top: -99999px !important;
+  -webkit-transform: translateY(-99999px) !important;
+  transform: translateY(-99999px) !important;
+}
